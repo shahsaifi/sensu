@@ -8,7 +8,7 @@
         "influxdb_udp"
       ],
       "interval": 60,
-      "playbook": "http://confluence.corp.ebates.com/dashboard.action",
+      "playbook": "",
       "notification": "check_apache app health-check",
       "occurrences": 5
     }
