@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "check_flume_app": {
+      "type": "metric",
+      "command": "check-process.rb -p flume -u flume -c 1",
+      "standalone": true,
+      "handlers": [
+        "influxdb_udp"
+      ],
+      "interval": 10
+    }
+  }
+}

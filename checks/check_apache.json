@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "check_apache": {
+      "command": "check_apache.rb",
+      "standalone": true,
+      "handlers": [
+        "default",
+        "influxdb_udp"
+      ],
+      "interval": 60,
+      "playbook": "http://confluence.corp.ebates.com/dashboard.action",
+      "notification": "check_apache app health-check",
+      "occurrences": 5
+    }
+  }
+}

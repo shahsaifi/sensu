@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "ebates-singapore-bundle": {
+      "command": "check_http -H :::name::: -u /health-check -w 3 -c 4 -t 10",
+      "standalone": true,
+      "handlers": [
+        "default",
+        "influxdb_udp"
+      ],
+      "interval": 60,
+      "playbook": "http://confluence.corp.ebates.com/dashboard.action",
+      "notification": "ebates-singapore-bundle app health-check",
+      "occurrences": 5
+    }
+  }
+}

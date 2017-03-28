@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "ntp_check": {
+      "type": "check",
+      "command": "check-ntp.rb",
+      "standalone": true,
+      "handlers": [
+        "default"
+      ],
+      "interval": 10
+    },
+    "metrics_ntpdate": {
+      "type": "check",
+      "command": "metrics-ntpdate.rb",
+      "standalone": true,
+      "handlers": [
+        "influxdb_udp"
+      ],
+      "interval": 10
+    }
+  }
+}

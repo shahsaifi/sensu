@@ -1,0 +1,16 @@
+{
+  "servers" : [ {
+    "port" : "8888",
+    "host" : "localhost",
+    "queries" : [ {
+      "obj" : "java.lang:type=Memory",
+      "resultAlias": "jvm.memory",
+      "attr" : [ "HeapMemoryUsage", "NonHeapMemoryUsage" ],
+      "outputWriters" : [ {
+        "@class" : "com.googlecode.jmxtrans.model.output.SensuWriter",
+        "host" : "localhost",
+        "handler" : "influxdb_udp"
+      } ]
+    } ]
+  } ]
+}

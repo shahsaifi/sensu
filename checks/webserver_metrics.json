@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "webserver_metrics": {
+      "type": "metric",
+      "command": "metrics-apache-graphite.rb -h :::name:::",
+      "standalone": true,
+      "handlers": [
+        "influxdb_udp"
+      ],
+      "interval": 10
+    }
+  }
+}

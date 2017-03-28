@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "check_ping_packet_loss": {
+      "type": "metric",
+      "command": "metrics-ping.rb -h :::name::: -c 10 -t 10",
+      "standalone": true,
+      "handlers": [
+        "influxdb_udp"
+      ],
+      "interval": 10
+    }
+  }
+}

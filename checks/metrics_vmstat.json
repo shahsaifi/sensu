@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "vmstat_metrics": {
+      "type": "metric",
+      "handlers": [ "default", "influxdb_udp" ], 
+      "command": "vmstat-metrics.rb --scheme stats.:::name:::",
+      "interval": 60,
+          "subscribers": [ "QA-SG" ]
+    }
+  }  
+}

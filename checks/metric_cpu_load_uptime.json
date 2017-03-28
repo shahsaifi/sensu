@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "metric_cpu_load_uptime": {
+      "type": "metric",
+      "command": "metrics-load.rb",
+      "standalone": true,
+      "handlers": [
+        "influxdb_udp"
+      ],
+      "interval": 10
+    }
+  }
+}
